@@ -19,7 +19,7 @@ flake' n k = appends
         fOutside = fCenter # opacity (1.7 / fromIntegral k)
 
 frontCover :: Diagram B
-frontCover = flake' 8 4
+frontCover = padX 1.05 $ vcat [flake' 8 4, strutY 100]
 
 cliMain :: IO ()
 cliMain = mainWith frontCover
